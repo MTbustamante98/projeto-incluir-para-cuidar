@@ -1,9 +1,9 @@
 {
-  "name": "incluir-para-cuidar-react",
+  "name": "incluir-para-cuidar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mtbustamante98.github.io/projeto-incluir-para-cuidar-REACT/",
+  "homepage": "https://mtbustamante98.github.io/projeto-incluir-para-cuidar/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

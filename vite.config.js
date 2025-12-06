@@ -7,8 +7,6 @@ export default defineConfig({
   plugins: [react(), svgr()],
   base: "/projeto-incluir-para-cuidar-REACT/",
   build: {
-    rollupOptions: {
-      input: "./index.html",
-    },
+    assetsDir: "assets",
   },
 });

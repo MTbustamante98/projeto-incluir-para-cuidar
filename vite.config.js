@@ -5,5 +5,5 @@ import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: "/incluir-para-cuidar-react",
+  base: "/incluir-para-cuidar-REACT",
 });

@@ -8,7 +8,7 @@ export const ROTINA_MAO = [
   },
   {
     img: "./assets/mao-ob.png",
-    video: "/videos/mao-ob.mp4",
+    video: "videos/mao-ob.mp4",
     balao: "./assets/img-numeracao-2.png",
     boneco: "./assets/boneco-sentado.png",
     descricao: ""

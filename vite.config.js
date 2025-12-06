@@ -5,5 +5,8 @@ import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: "/projeto-incluir-para-cuidar-REACT/",
+  base:
+    import.meta.NODE_ENV === "production"
+      ? "/projeto-incluir-para-cuidar-REACT/"
+      : "/",
 });

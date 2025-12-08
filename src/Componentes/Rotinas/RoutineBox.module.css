@@ -43,6 +43,38 @@
   left: 12rem;
 }
 
+@media (max-width: 90rem) {
+  .containerImgRoutine {
+    top: 0.625rem;
+    left: 22rem;
+  }
+
+  .containerImgRoutine img {
+    height: 400px;
+  }
+
+  .videoRoutine {
+    width: 25%;
+    height: 75%;
+    top: 3.438rem;
+  }
+
+  .positionPuppet {
+    top: 20rem;
+    left: 11rem;
+  }
+
+  .informativeParagraph {
+    top: -8rem;
+    right: 3.75rem;
+  }
+
+  .numberingRoutines {
+    right: 22.75rem;
+    margin-top: -7rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .containerImgRoutine {
     top: 1.25rem;

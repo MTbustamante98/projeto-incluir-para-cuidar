@@ -83,6 +83,28 @@
 }
 
 @media (max-width: 90rem) {
+  .containerSugestao {
+    margin-top: -4rem;
+  }
+
+  .baloonImg {
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    left: 8rem;
+    top: 8rem;
+  }
+
+  .form textarea {
+    height: 77%;
+  }
+
+  .sobreposicao1 {
+    height: 7%;
+  }
+}
+
+@media (max-width: 80rem) {
   .baloonImg {
     width: 300px;
     height: 300px;

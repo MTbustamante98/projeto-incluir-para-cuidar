@@ -63,8 +63,22 @@
   outline: none !important;
 }
 
+@media (max-width: 90rem) {
+  .ButtonSlideContainer {
+    width: 250px;
+  }
+
+  .menuIcons {
+    margin-bottom: 3rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .ButtonSlideContainer {
     width: 250px;
+  }
+
+  .menuIcons {
+    margin-bottom: 5rem;
   }
 }

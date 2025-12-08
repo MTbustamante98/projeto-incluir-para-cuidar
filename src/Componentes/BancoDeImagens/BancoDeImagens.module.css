@@ -11,6 +11,21 @@
   top: 13rem;
 }
 
+@media (max-width: 90rem) {
+  .videoBankPosition {
+    width: 23%;
+    height: 75%;
+    right: 3.75rem;
+    top: 7rem !important;
+  }
+
+  .informativeParagraph {
+    right: 2rem;
+    top: 5rem;
+    font-size: 0.675rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .videoBankPosition {
     width: 30%;
@@ -21,5 +36,6 @@
   .informativeParagraph {
     right: 1rem;
     top: 8rem;
+    font-size: 0.75rem;
   }
 }

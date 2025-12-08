@@ -46,6 +46,23 @@
   box-shadow: 0 0 0 0;
 }
 
+@media (max-width: 90rem) {
+  .imgNext {
+    height: 65%;
+    top: 1rem;
+  }
+
+  .imgPrev {
+    height: 65%;
+    top: 1rem; 
+  }
+
+  .buttonSugestoes {
+    padding: 0.5rem 2.5rem;
+    top: 1.75rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .imgNext {
     height: 55%;

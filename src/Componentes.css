@@ -23,17 +23,11 @@
   border-radius: 4px;
 }
 
-/* .informative-paragraph {
-  position: absolute;
-  right: 4rem;
-  top: 1.875rem;
-} */
-
 @media (max-width: 90rem) {
   .container-media-video {
     width: 23%;
     height: 75%;
-    top: 1.875rem;
+    top: 3rem;
   }
 }
 

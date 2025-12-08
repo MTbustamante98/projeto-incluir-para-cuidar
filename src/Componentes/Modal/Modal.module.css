@@ -63,6 +63,17 @@
   cursor: pointer;
 }
 
+@media (max-width: 90rem) {
+  .boxModal {
+    width: 250px;
+    height: 200px;
+  }
+
+  .closeModal {
+    right: 15%;
+  }
+}
+
 @media (max-width: 80rem) {
   .modal {
     left: 24%;

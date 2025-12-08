@@ -2,6 +2,12 @@
   margin: -4rem 0 0 1.25rem;
 }
 
+@media (max-width: 90rem) {
+  .initialContainerImg {
+    margin: -6rem 0 0 1.25rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .initialContainerImg {
     margin: -1rem 0 0 1.25rem;

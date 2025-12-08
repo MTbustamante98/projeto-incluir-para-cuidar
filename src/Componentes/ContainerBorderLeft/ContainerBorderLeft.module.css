@@ -16,9 +16,21 @@
   padding-top: 15rem;
 }
 
+@media (max-width: 90rem) {
+  .containerBorderLeft {
+    width: 12%;
+    padding-top: 10rem;
+  }
+
+  :global(.route-rotina-mao) .containerBorderLeft {
+    padding-top: 10rem;
+  }
+}
+
 @media (max-width: 80rem) {
   .containerBorderLeft {
     width: 12%;
+    padding-top: 13rem;
   }
 
   :global(.route-rotina-mao) .containerBorderLeft {

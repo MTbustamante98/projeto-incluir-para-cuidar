@@ -1,0 +1,105 @@
+.containerSugestao {
+  display: flex;
+  justify-self: center;
+  height: 100vh;
+  margin-top: 5rem;
+}
+
+.baloonImg {
+  width: 350px;
+  height: 350px;
+  position: fixed;
+  left: 20rem;
+  top: 8rem;
+}
+
+.form {
+  position: relative;
+  height: 40%;
+}
+
+.form .inputLabel {
+  position: absolute;
+  top: 5.5rem;
+}
+
+.inputLabel label {
+  font: 600 1.2rem "Roboto", Arial, sans-serif;
+}
+
+.inputLabel input {
+  padding: 0.4rem 0.3rem;
+  margin-left: 0.3rem;
+}
+
+.form textarea {
+  position: absolute;
+  top: 175px;
+  left: 8px;
+  width: 97%;
+  height: 54%;
+  border: none;
+  resize: none;
+  box-sizing: border-box;
+  padding: 0.625rem;
+  overflow: hidden;
+}
+
+.form textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.form textarea::placeholder {
+  font: 500 3rem/1.3 "Special Elite", cursive;
+  text-align: center;
+  color: var(--black);
+  padding: 35px;
+}
+
+.sobreposicao1 {
+  position: absolute;
+  background: var(--white);
+  width: 97%;
+  height: 5%;
+  top: 373px;
+  left: 8px;
+  z-index: -1;
+}
+
+.sobreposicao2 {
+  position: absolute;
+  background: var(--white);
+  width: 97%;
+  height: 5%;
+  top: 163px;
+  left: 8px;
+  z-index: -1;
+}
+
+.textareaImg {
+  width: 550px;
+  height: 550px;
+}
+
+@media (max-width: 90rem) {
+  .baloonImg {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    left: 3rem;
+    top: 8rem;
+  }
+
+  .containerSugestao {
+    margin-top: 2rem;
+  }
+
+  .form textarea {
+    height: 58%;
+  }
+
+  .sobreposicao1 {
+    height: 7%;
+  }
+}

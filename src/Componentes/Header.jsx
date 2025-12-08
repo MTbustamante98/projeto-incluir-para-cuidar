@@ -14,7 +14,13 @@ const Header = () => {
   useModifyTitle();
 
   return (
-    <header className={`${styles.header} ${anime}`}>
+    <header
+      className={
+        pathname === "/sugestoes"
+          ? `${styles.headerSugestoes || ""}`
+          : `${styles.header} ${anime}`
+      }
+    >
       <Link to="/" aria-label="Incluir para cuidar - Home">
         <img src={Logo} alt="Logo" />
       </Link>

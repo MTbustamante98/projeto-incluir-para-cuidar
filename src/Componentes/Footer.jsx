@@ -9,18 +9,28 @@ const Footer = ({ next, prev }) => {
 
   return (
     <footer className={styles.footer}>
-      <Link to={next} aria-label="Avançar para a próxima página">
-        <img
-          className={styles.imgNext}
-          src={ImgNext}
-          alt="Ícone para clicar e avançar"
-        />
-      </Link>
       {pathname !== "/" && (
-        <Link to={prev} aria-label="Avançar para a próxima página">
+        <Link to={prev} aria-label="Retornar para página anterior.">
           <img
             className={styles.imgPrev}
             src={ImgPrev}
+            alt="Ícone para clicar e retornar"
+          />
+        </Link>
+      )}
+      {pathname === "/sugestoes" ? (
+        <button
+          className={`${styles.buttonSugestoes} font-btn-sugestao`}
+          type="submit"
+          form="sendEmail"
+        >
+          Enviar
+        </button>
+      ) : (
+        <Link to={next} aria-label="Avançar para a próxima página.">
+          <img
+            className={styles.imgNext}
+            src={ImgNext}
             alt="Ícone para clicar e avançar"
           />
         </Link>

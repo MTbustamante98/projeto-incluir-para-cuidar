@@ -25,7 +25,7 @@ const RotinaMao = () => {
           <RoutineImage
             className={styleBoxRoutine.positionPuppet}
             src={currentList.boneco}
-            alt="Figura que ilustra o tipo da rotina."
+            alt="Figura que ilustra a posição em que a pessoa deverá ficar."
           />
         </>
       )}

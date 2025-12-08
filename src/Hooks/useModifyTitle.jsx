@@ -18,6 +18,9 @@ const routesObj = {
   "/rotina-torax": {
     title: "Rotina Tórax",
   },
+  "/sugestoes": {
+    title: "Sugestão"
+  }
 };
 
 const useModifyTitle = () => {
@@ -29,7 +32,7 @@ const useModifyTitle = () => {
     if (!typeRoute) modifierValueTitle("");
 
     if (typeRoute) modifierValueTitle(routesObj[pathname].title);
-  }, [pathname, modifierValueTitle]);
+  }, [pathname, modifierValueTitle, typeRoute]);
 
   return typeRoute;
 };

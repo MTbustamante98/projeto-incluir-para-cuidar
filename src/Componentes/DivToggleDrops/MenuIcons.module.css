@@ -62,3 +62,9 @@
 .ButtonSlideContainer:focus {
   outline: none !important;
 }
+
+@media (max-width: 80rem) {
+  .ButtonSlideContainer {
+    width: 250px;
+  }
+}

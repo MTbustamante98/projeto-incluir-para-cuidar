@@ -5,7 +5,7 @@
 .containerImgRoutine {
   position: absolute;
   top: 3rem;
-  left: 28.75rem;
+  left: 42rem;
 }
 
 .containerImgRoutine img {
@@ -13,23 +13,16 @@
   height: 550px;
 }
 
-.videoRoutine {
-  width: 33%;
-  height: 55%;
-  right: 60px;
-  top: 13.25rem;
-}
-
 .informativeParagraph {
   position: absolute;
-  right: 4rem;
-  top: 2.25rem;
+  right: 4.75rem;
+  top: -5.5rem;
 }
 
 .numberingRoutines {
   position: absolute;
-  right: 41.25rem;
-  margin-top: 2.75rem;
+  right: 29rem;
+  margin-top: -3rem;
 }
 
 .numberingRoutines img {
@@ -41,6 +34,31 @@
   position: absolute;
   top: 34rem;
   left: 12rem;
+}
+
+.containerProperties {
+  position: relative;
+  left: 12rem;
+}
+
+.characteristics {
+  font: 700 1.25rem "Special Elite", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+.listCharacteristics {
+  margin-top: 0.938rem;
+  max-width: 55ch;
+}
+
+.listCharacteristics li {
+  margin-top: 0.938rem;
+  font: 400 0.975rem/1.6 "Roboto", sans-serif;
+  letter-spacing: 0.6px;
+}
+
+.listCharacteristics .description {
+  font: 700 1.1rem "Roboto", sans-serif;
 }
 
 @media (max-width: 90rem) {

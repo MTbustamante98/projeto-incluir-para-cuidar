@@ -1,8 +1,8 @@
 .videoBankPosition {
-  width: 50%;
-  height: 60%;
-  top: 15rem;
-  right: 20rem;
+  width: 50% !important;
+  height: 60% !important;
+  top: 15rem !important;
+  right: 20rem !important;
 }
 
 .informativeParagraph {

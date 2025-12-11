@@ -13,9 +13,9 @@
 
 @media (max-width: 90rem) {
   .videoBankPosition {
-    width: 23%;
-    height: 75%;
-    right: 3.75rem;
+    width: 23% !important;
+    height: 75% !important;
+    right: 3.75rem !important;
     top: 7rem !important;
   }
 

@@ -38,7 +38,7 @@
 
 .containerProperties {
   position: relative;
-  left: 12rem;
+  left: 11.75rem;
 }
 
 .characteristics {
@@ -61,10 +61,17 @@
   font: 700 1.1rem "Roboto", sans-serif;
 }
 
+.imgMenuMob {
+  position: absolute;
+  left: 290px;
+  top: -3px;
+  cursor: pointer;
+}
+
 @media (max-width: 90rem) {
   .containerImgRoutine {
     top: 0.625rem;
-    left: 22rem;
+    left: 30rem;
   }
 
   .containerImgRoutine img {
@@ -88,8 +95,28 @@
   }
 
   .numberingRoutines {
-    right: 22.75rem;
-    margin-top: -7rem;
+    right: 21.25rem;
+    margin-top: -7.75rem;
+  }
+
+  .characteristics {
+    font-size: 0.875rem;
+  }
+
+  .listCharacteristics .description {
+    font-size: 0.975rem;
+  }
+
+  .listCharacteristics li {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 90rem) {
+  .videoRoutine {
+    width: 23%;
+    height: 75%;
+    top: 3rem;
   }
 }
 

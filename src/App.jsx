@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Suspense, lazy } from "react";
 import "./App.css";
 import { UserStorage } from "./UserContext";
+import MenuContext from "./UserMenuContext";
 
 const Home = lazy(() => import("./Componentes/Home"));
 const Header = lazy(() => import("./Componentes/Header"));
@@ -22,15 +23,20 @@ function App() {
           <Header />
           <main>
             <Suspense fallback={<div className="spinner"></div>}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/banco-de-imagens" element={<BancoDeImagens />} />
-                <Route path="/rotina-mao" element={<RotinaMao />} />
-                <Route path="/rotina-cranio" element={<RotinaCranio />} />
-                <Route path="/rotina-abdome" element={<RotinaAbdome />} />
-                <Route path="/rotina-torax" element={<RotinaTorax />} />
-                <Route path="/sugestoes" element={<Sugestoes />} />
-              </Routes>
+              <MenuContext>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route
+                    path="/banco-de-imagens"
+                    element={<BancoDeImagens />}
+                  />
+                  <Route path="/rotina-mao" element={<RotinaMao />} />
+                  <Route path="/rotina-cranio" element={<RotinaCranio />} />
+                  <Route path="/rotina-abdome" element={<RotinaAbdome />} />
+                  <Route path="/rotina-torax" element={<RotinaTorax />} />
+                  <Route path="/sugestoes" element={<Sugestoes />} />
+                </Routes>
+              </MenuContext>
             </Suspense>
           </main>
         </UserStorage>

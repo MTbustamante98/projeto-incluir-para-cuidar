@@ -31,11 +31,11 @@ const BancoDeImagens = () => {
 
       {activeVideo && (
         <>
-          <Video className={styles.videoBankPosition} source={currentVideo} />
           <p className={`${styles.informativeParagraph} font-instruction`}>
             Selecione uma opção do menu para visualizar um vídeo tutorial
             diferente.
           </p>
+          <Video className={styles.videoBankPosition} source={currentVideo} />
         </>
       )}
       {activeModal && <Modal />}

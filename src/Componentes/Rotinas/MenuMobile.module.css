@@ -1,5 +1,5 @@
-.ContainerMobileMenu {
-  width: 30%;
+.containerMobileMenu {
+  width: 33%;
   height: 60%;
   border-radius: 0.313rem;
   background: url("./assets/rad_background-removebg.png") center no-repeat;
@@ -9,7 +9,7 @@
   border-left-style: solid;
   border-left-width: 5px;
   border-left-color: var(--lightgreen);
-  padding: 0.313rem;
+  padding: 0.938rem;
   margin-top: 0.313rem;
   animation: showUp 0.5s forwards;
 }
@@ -24,3 +24,9 @@
     transform: translateY(20px);
   }
 }
+
+/* @media (max-width: 80rem) {
+  .containerMobileMenu {
+    width: 32%;
+  }
+} */

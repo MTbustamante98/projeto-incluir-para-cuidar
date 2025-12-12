@@ -4,9 +4,9 @@ import ContainerList from "./ContainerList";
 
 const MenuMobile = ({ currentList, ref }) => {
   return (
-    <div ref={ref} className={styles.ContainerMobileMenu}>
-      <ContainerList currentList={currentList} />
-    </div>
+      <div ref={ref} className={styles.containerMobileMenu}>
+        <ContainerList currentList={currentList} />
+      </div>
   );
 };
 

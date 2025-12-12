@@ -41,6 +41,10 @@
   left: 11.75rem;
 }
 
+.containerPropertiesMobile {
+  position: relative;
+}
+
 .characteristics {
   font: 700 1.25rem "Special Elite", sans-serif;
   letter-spacing: 0.8px;
@@ -112,18 +116,10 @@
   }
 }
 
-@media (max-width: 90rem) {
-  .videoRoutine {
-    width: 23%;
-    height: 75%;
-    top: 3rem;
-  }
-}
-
 @media (max-width: 80rem) {
   .containerImgRoutine {
-    top: 1.25rem;
-    left: 20rem;
+    top: 1.875rem;
+    left: 23rem;
   }
 
   .containerImgRoutine img {
@@ -132,8 +128,8 @@
   }
 
   .videoRoutine {
-    width: 27%;
-    height: 600px;
+    width: 27% !important;
+    height: 600px !important;
     top: 7rem !important;
   }
 

@@ -28,13 +28,13 @@
 
 @media (max-width: 80rem) {
   .videoBankPosition {
-    width: 30%;
-    height: 70%;
+    width: 30% !important;
+    height: 70% !important;
     top: 10rem !important;
   }
 
   .informativeParagraph {
-    right: 1rem;
+    right: 3.25rem;
     top: 8rem;
     font-size: 0.75rem;
   }

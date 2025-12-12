@@ -1,13 +1,25 @@
 import React from "react";
 import styleBoxRoutine from "./RoutineBox.module.css";
+import useMedia from "../../Hooks/useMedia";
 
 const ContainerList = ({ currentList }) => {
+  const mobile = useMedia("(max-width: 90rem)");
+
   return (
-    <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
+    <div
+      className={
+        mobile
+          ? `${styleBoxRoutine.containerPropertiesMobile}`
+          : `${styleBoxRoutine.containerProperties} animeUp`
+      }
+    >
       <h2 className={styleBoxRoutine.characteristics}>
         Características do posicionamento
       </h2>
-      <ul key={currentList.id} className={styleBoxRoutine.listCharacteristics}>
+      <ul
+        key={currentList.id}
+        className={`${styleBoxRoutine.listCharacteristics}`}
+      >
         <li>
           <span className={styleBoxRoutine.description}>Tipo:</span>{" "}
           {currentList.tipo}

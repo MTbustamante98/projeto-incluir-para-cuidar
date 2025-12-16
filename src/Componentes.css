@@ -36,6 +36,15 @@
     width: 30%;
     height: 70%;
     top: 5.25rem;
-    right: 1.875rem !important;
+    right: 1.875rem;
+  }
+}
+
+@media (max-width: 64rem) {
+  .container-media-video {
+    width: 70%;
+    height: 40%;
+    top: 25rem;
+    right: 6.75rem;
   }
 }

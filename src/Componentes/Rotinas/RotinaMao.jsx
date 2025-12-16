@@ -10,19 +10,20 @@ import RoutineImage from "./RoutineImage";
 import ContainerList from "./ContainerList";
 import ImgArrow from "./ImgArrow";
 import useMedia from "../../Hooks/useMedia";
-import MenuMobile from "./MenuMobile";
+import ResponsiveMenu from "./ResponsiveMenu";
 import { UserMenuContext } from "../../CreateMenuContext";
 import useCallRef from "../../Hooks/useCallRef";
+import useCalcSpacing from "../../Hooks/useCalcSpacing";
 
 const RotinaMao = () => {
   const { currentList, nextStep, index } = useRoutines(ROTINA_MAO);
-  const mobile = useMedia("(max-width: 90rem)");
+  const responsive = useMedia("(max-width: 90rem)");
   const { toggleMenu, activeMenu, setActiveMenu } =
     React.useContext(UserMenuContext);
   const refMenu = React.useRef(null);
   const refArrow = React.useRef(null);
-  
   useCallRef(refMenu, refArrow, setActiveMenu);
+  const spacing = useCalcSpacing()
 
   return (
     <section className={styleBoxRoutine.parentContainer}>
@@ -42,7 +43,7 @@ const RotinaMao = () => {
           />
         </>
       )}
-      {mobile ? (
+      {responsive ? (
         <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
           <h2 className={styleBoxRoutine.characteristics}>
             Características do posicionamento
@@ -52,10 +53,12 @@ const RotinaMao = () => {
             className={styleBoxRoutine.imgMenuMob}
             onClick={toggleMenu}
           />
-          {activeMenu && <MenuMobile ref={refMenu} currentList={currentList} />}
+          {activeMenu && (
+            <ResponsiveMenu ref={refMenu} currentList={currentList} />
+          )}
         </div>
       ) : (
-        <ContainerList currentList={currentList} />
+        <ContainerList className="responsive" currentList={currentList} />
       )}
       <p className={`${styleBoxRoutine.informativeParagraph} font-instruction`}>
         Avance o vídeo para mudar o posicionamento.
@@ -63,7 +66,7 @@ const RotinaMao = () => {
       {ROTINA_MAO.slice(0, index + 1).map((item, i) => (
         <div
           key={item.id}
-          style={{ top: `calc(${i} * 140px)` }}
+          style={{ top: spacing(i) }}
           className={styleBoxRoutine.numberingRoutines}
         >
           <img src={item.balao} />

@@ -3,12 +3,12 @@ import styleBoxRoutine from "./RoutineBox.module.css";
 import useMedia from "../../Hooks/useMedia";
 
 const ContainerList = ({ currentList }) => {
-  const mobile = useMedia("(max-width: 90rem)");
+  const responsive = useMedia("(max-width: 90rem)");
 
   return (
     <div
       className={
-        mobile
+        responsive
           ? `${styleBoxRoutine.containerPropertiesMobile}`
           : `${styleBoxRoutine.containerProperties} animeUp`
       }

@@ -23,6 +23,7 @@
   position: absolute;
   right: 29rem;
   margin-top: -3rem;
+  z-index: -1;
 }
 
 .numberingRoutines img {
@@ -146,5 +147,49 @@
   .numberingRoutines {
     right: 21rem;
     margin-top: -2rem;
+  }
+}
+
+@media (max-width: 64rem) {
+  .containerImgRoutine {
+    top: 6rem;
+    left: 0;
+  }
+
+  .containerImgRoutine img {
+    width: 60% !important;
+    height: 600px;
+  }
+
+  .videoRoutine {
+    width: 40% !important;
+    height: 65% !important;
+    right: 1.875rem !important;
+    top: 10rem !important;
+  }
+
+  .containerProperties {
+    left: 0.625rem;
+    margin-top: 2rem;
+  }
+
+  .positionPuppet {
+    top: 47rem;
+    left: 19rem;
+  }
+
+  .informativeParagraph {
+    top: 1.5rem;
+    right: 2rem;
+  }
+
+  .numberingRoutines {
+    right: 17.75rem;
+    margin-top: 2rem;
+  }
+
+  .numberingRoutines img {
+    width: 100px !important;
+    height: 100px !important;
   }
 }

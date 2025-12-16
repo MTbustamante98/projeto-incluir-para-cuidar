@@ -12,6 +12,7 @@
   padding: 0.938rem;
   margin-top: 0.313rem;
   animation: showUp 0.5s forwards;
+  z-index: 999;
 }
 
 @keyframes showUp {
@@ -25,8 +26,10 @@
   }
 }
 
-/* @media (max-width: 80rem) {
+@media (max-width: 64rem) {
   .containerMobileMenu {
-    width: 32%;
+    width: 45%;
+    height: 60%;
+   
   }
-} */
+}

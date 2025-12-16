@@ -16,9 +16,10 @@ const Home = () => {
       <div className={`${styles.initialContainerImg} opacityAnime `}>
         <picture>
           <source
-            media="(max-width: 90rem)"
+            media="(max-width: 1440px)"
             srcSet={imgInicialMedio}
             type="image/png"
+            style={{ aspectRatio: "850 / 650" }}
           />
           <img
             src={imgInicial}

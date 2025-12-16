@@ -9,12 +9,14 @@ import { Link, useLocation } from "react-router-dom";
 import MenuIcon from "../DivToggleDrops/MenuIcon";
 import { UserContext } from "../../CreateUserContext";
 import useModifyTitle from "../../Hooks/useModifyTitle";
+import useResponsiveRoutines from "../../Hooks/useResponsiveRoutines";
 
 const ContainerBorderLeft = () => {
   const { changeVideo, modifierValueTitle, openModal } =
     React.useContext(UserContext);
   const typeRoute = useModifyTitle();
   const { pathname } = useLocation();
+  const responsiveBorder = useResponsiveRoutines();
 
   function modifyVideoAndTitle({ target }) {
     switch (target.innerText) {
@@ -39,6 +41,7 @@ const ContainerBorderLeft = () => {
     document.body.classList.add(`route-${pathname.replace("/", "")}`);
   }, [pathname]);
 
+  if (!responsiveBorder) return null;
   return (
     <section className={`${styles.containerBorderLeft} animeUp`}>
       <Link to="/">

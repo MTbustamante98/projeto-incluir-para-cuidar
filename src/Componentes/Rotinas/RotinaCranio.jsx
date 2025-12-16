@@ -10,19 +10,21 @@ import ImgArrow from "./ImgArrow";
 import Video from "../Video";
 import ContainerList from "./ContainerList";
 import useMedia from "../../Hooks/useMedia";
-import MenuMobile from "./MenuMobile";
+import ResponsiveMenu from "./ResponsiveMenu";
 import { UserMenuContext } from "../../CreateMenuContext";
 import useCallRef from "../../Hooks/useCallRef";
+import useCalcSpacing from "../../Hooks/useCalcSpacing";
 
 const RotinaCranio = () => {
   const { currentList, nextStep, index } = useRoutines(ROTINA_CRANIO);
-  const mobile = useMedia("(max-width: 90rem)");
+  const responsive = useMedia("(max-width: 90rem)");
   const { activeMenu, toggleMenu, setActiveMenu } =
     React.useContext(UserMenuContext);
   const refMenu = React.useRef(null);
   const refArrow = React.useRef(null);
 
   useCallRef(refMenu, refArrow, setActiveMenu);
+  const calcSpacing = useCalcSpacing();
 
   return (
     <section className={styleBoxRoutine.parentContainer}>
@@ -43,7 +45,7 @@ const RotinaCranio = () => {
           />
         </>
       )}
-      {mobile ? (
+      {responsive ? (
         <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
           <h2 className={styleBoxRoutine.characteristics}>
             Características do posicionamento
@@ -54,7 +56,9 @@ const RotinaCranio = () => {
             className={styleBoxRoutine.imgMenuMob}
             onClick={toggleMenu}
           />
-          {activeMenu && <MenuMobile ref={refMenu} currentList={currentList} />}
+          {activeMenu && (
+            <ResponsiveMenu ref={refMenu} currentList={currentList} />
+          )}
         </div>
       ) : (
         <ContainerList currentList={currentList} />
@@ -65,7 +69,7 @@ const RotinaCranio = () => {
       {ROTINA_CRANIO.slice(0, index + 1).map((item, i) => (
         <div
           key={i}
-          style={{ top: `calc(${i} * 140px)` }}
+          style={{ top: calcSpacing(i) }}
           className={styleBoxRoutine.numberingRoutines}
         >
           <img src={item.balao} />

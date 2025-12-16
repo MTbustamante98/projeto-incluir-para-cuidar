@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./MenuMobile.module.css";
+import styles from "./ResponsiveMenu.module.css";
 import ContainerList from "./ContainerList";
 
-const MenuMobile = ({ currentList, ref }) => {
+const ResponsiveMenu = ({ currentList, ref }) => {
   return (
       <div ref={ref} className={styles.containerMobileMenu}>
         <ContainerList currentList={currentList} />
@@ -10,4 +10,4 @@ const MenuMobile = ({ currentList, ref }) => {
   );
 };
 
-export default MenuMobile;
+export default ResponsiveMenu;

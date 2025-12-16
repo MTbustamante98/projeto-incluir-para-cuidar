@@ -52,3 +52,38 @@
   right: 0.625rem;
   bottom: 1.75rem;
 }
+
+@media (max-width: 64rem) {
+  .header {
+    gap: 0;
+  }
+
+  .header .logo {
+    width: 75%;
+    height: auto;
+  }
+
+  .headerSugestoes .logo {
+    width: 75%;
+  }
+
+  .title {
+    margin-top: 2rem;
+  }
+
+  .titleSugestoes {
+    font-size: 3rem;
+    margin-top: 2.25rem;
+  }
+
+  .title::before {
+    right: 0.313rem;
+  }
+
+  .title::after {
+    position: absolute;
+    top: -1rem;
+    margin-left: 0;
+    background: url("../assets/ico-play.png") no-repeat;
+  }
+}

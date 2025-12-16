@@ -12,7 +12,10 @@
   pointer-events: auto;
 }
 
-:global(.route-rotina-mao) .containerBorderLeft {
+:global(.route-rotina-mao) .containerBorderLeft,
+:global(.route-rotina-cranio) .containerBorderLeft,
+:global(.route-rotina-abdome) .containerBorderLeft,
+:global(.route-rotina-torax) .containerBorderLeft {
   padding-top: 15rem;
 }
 
@@ -22,7 +25,10 @@
     padding-top: 10rem;
   }
 
-  :global(.route-rotina-mao) .containerBorderLeft {
+  :global(.route-rotina-mao) .containerBorderLeft,
+  :global(.route-rotina-cranio) .containerBorderLeft,
+  :global(.route-rotina-abdome) .containerBorderLeft,
+  :global(.route-rotina-torax) .containerBorderLeft {
     padding-top: 10rem;
   }
 }
@@ -33,7 +39,24 @@
     padding-top: 13rem;
   }
 
-  :global(.route-rotina-mao) .containerBorderLeft {
+  :global(.route-rotina-mao) .containerBorderLeft,
+  :global(.route-rotina-cranio) .containerBorderLeft,
+  :global(.route-rotina-abdome) .containerBorderLeft,
+  :global(.route-rotina-torax) .containerBorderLeft {
+    padding-top: 14rem;
+  }
+}
+
+@media (max-width: 64rem) {
+  .containerBorderLeft {
+    width: 17%;
+    padding-top: 8rem;
+  }
+
+  :global(.route-rotina-mao) .containerBorderLeft,
+  :global(.route-rotina-cranio) .containerBorderLeft,
+  :global(.route-rotina-abdome) .containerBorderLeft,
+  :global(.route-rotina-torax) .containerBorderLeft {
     padding-top: 14rem;
   }
 }

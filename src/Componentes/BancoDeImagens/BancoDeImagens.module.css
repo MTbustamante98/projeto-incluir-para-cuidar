@@ -39,3 +39,16 @@
     font-size: 0.75rem;
   }
 }
+
+@media (max-width: 64rem) {
+  .videoBankPosition {
+    width: 45% !important;
+    height: 75% !important;
+    right: 2rem !important;
+  }
+
+  .informativeParagraph {
+    right: 1.75rem;
+    font-size: 0.688rem;
+  }
+}

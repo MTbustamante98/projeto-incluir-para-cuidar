@@ -9,20 +9,22 @@ import RoutineImage from "./RoutineImage";
 import ImgArrow from "./ImgArrow";
 import Video from "../Video";
 import ContainerList from "./ContainerList";
-import MenuMobile from "./MenuMobile";
 import useMedia from "../../Hooks/useMedia";
 import { UserMenuContext } from "../../CreateMenuContext";
 import useCallRef from "../../Hooks/useCallRef";
+import ResponsiveMenu from "./ResponsiveMenu";
+import useCalcSpacing from "../../Hooks/useCalcSpacing";
 
 const RotinaTorax = () => {
   const { currentList, nextStep, index } = useRoutines(ROTINA_TORAX);
-  const mobile = useMedia("(max-width: 90rem)");
+  const responsive = useMedia("(max-width: 90rem)");
   const { activeMenu, toggleMenu, setActiveMenu } =
     React.useContext(UserMenuContext);
   const refMenu = React.useRef(null);
   const refArrow = React.useRef(null);
 
   useCallRef(refMenu, refArrow, setActiveMenu);
+  const calcSpacing = useCalcSpacing();
 
   return (
     <section className={styleBoxRoutine.parentContainer}>
@@ -43,7 +45,7 @@ const RotinaTorax = () => {
           />
         </>
       )}
-      {mobile ? (
+      {responsive ? (
         <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
           <h2 className={styleBoxRoutine.characteristics}>
             Características do posicionamento
@@ -55,7 +57,7 @@ const RotinaTorax = () => {
             onClick={toggleMenu}
           />
           {activeMenu && (
-            <MenuMobile ref={refMenu} currentList={currentList} />
+            <ResponsiveMenu ref={refMenu} currentList={currentList} />
           )}
         </div>
       ) : (
@@ -67,7 +69,7 @@ const RotinaTorax = () => {
       {ROTINA_TORAX.slice(0, index + 1).map((item, i) => (
         <div
           key={i}
-          style={{ top: `calc(${i} * 140px)` }}
+          style={{ top: calcSpacing(i) }}
           className={styleBoxRoutine.numberingRoutines}
         >
           <img src={item.balao} />

@@ -34,8 +34,8 @@
 
 .form textarea {
   position: absolute;
-  top: 175px;
-  left: 8px;
+  top: 10.938rem;
+  left: 0.5rem;
   width: 97%;
   height: 54%;
   border: none;
@@ -72,8 +72,8 @@
   background: var(--white);
   width: 97%;
   height: 5%;
-  top: 163px;
-  left: 8px;
+  top: 10.188rem;
+  left: 0.5rem;
   z-index: -1;
 }
 
@@ -123,5 +123,44 @@
 
   .sobreposicao1 {
     height: 7%;
+  }
+}
+
+@media (max-width: 64rem) {
+  .containerSugestao {
+    margin-top: 9rem;
+    margin-left: 7rem;
+  }
+
+  .baloonImg {
+    width: 140px;
+    height: 140px;
+    top: 18rem;
+    left: 1rem;
+  }
+
+  .form textarea {
+    height: 35%;
+    top: 9.375rem;
+  }
+
+  .form textarea::placeholder {
+    font-size: 2.5rem;
+    padding: 1.875rem;
+  }
+
+  .sobreposicao1 {
+    height: 5%;
+    top: 8.25rem;
+  }
+
+  .sobreposicao2 {
+    height: 6%;
+    top: 18.25rem;
+  }
+
+  .textareaImg {
+    width: 450px;
+    height: 450px;
   }
 }

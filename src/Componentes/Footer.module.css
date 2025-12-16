@@ -54,12 +54,12 @@
 
   .imgPrev {
     height: 65%;
-    top: 1rem; 
+    top: 1rem;
   }
 
   .buttonSugestoes {
     padding: 0.5rem 2.5rem;
-    top: 1.75rem;
+    top: 1rem;
   }
 }
 
@@ -72,5 +72,32 @@
   .imgPrev {
     height: 55%;
     top: 1.5rem;
+  }
+
+  .buttonSugestoes {
+    top: 1.75rem;
+  }
+}
+
+@media (max-width: 64rem) {
+  .footer {
+    height: 8%;
+  }
+
+  .imgNext {
+    height: 50%;
+    width: 5% !important;
+    top: 1rem;
+  }
+
+  .imgPrev {
+    height: 50%;
+    width: 5% !important;
+    top: 1rem;
+  }
+
+  .buttonSugestoes {
+    padding: 0.5rem 2.5rem;
+    top: 1.25rem;
   }
 }

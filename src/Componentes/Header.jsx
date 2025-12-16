@@ -22,7 +22,7 @@ const Header = () => {
       }
     >
       <Link to="/" aria-label="Incluir para cuidar - Home">
-        <img src={Logo} alt="Logo" />
+        <img className={styles.logo} src={Logo} alt="Logo" />
       </Link>
       {pathname !== "/" && <Titulo>{modifyTitle}</Titulo>}
     </header>

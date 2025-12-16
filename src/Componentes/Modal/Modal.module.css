@@ -90,3 +90,20 @@
     right: 15%;
   }
 }
+
+@media (max-width: 64rem) {
+  .modal {
+    width: auto;
+    left: 10%;
+  }
+
+  .boxModal {
+    width: 200px;
+    height: 170px;
+  }
+
+  .closeModal {
+    top: -17%;
+    right: 15%;
+  }
+}

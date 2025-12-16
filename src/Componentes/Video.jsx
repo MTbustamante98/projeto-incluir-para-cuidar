@@ -1,10 +1,16 @@
 import React from "react";
 import "../Componentes.css";
 import "../Animations.css";
-const Video = ({ source, className, onEnded }) => {
+const Video = ({ source, className, onEnded, ...props }) => {
   return (
     <div className={`container-media-video animeLeft ${className || ""}`}>
-      <video controls className="media-video" key={source} onEnded={onEnded}>
+      <video
+        controls
+        className="media-video"
+        key={source}
+        onEnded={onEnded}
+        {...props}
+      >
         <source src={source} type="video/mp4" />
         <track
           src="/legendas.vtt"

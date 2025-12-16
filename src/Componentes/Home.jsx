@@ -28,7 +28,10 @@ const Home = () => {
           />
         </picture>
       </div>
-      <Video source="/videos/video-apresentacao-inicial.mp4" />
+      <Video
+        source="/videos/video-apresentacao-inicial.mp4"
+        aria-label="Vídeo introdutório sobre o projeto Incluir para Cuidar"
+      />
       <Footer next="/banco-de-imagens" />
     </section>
   );

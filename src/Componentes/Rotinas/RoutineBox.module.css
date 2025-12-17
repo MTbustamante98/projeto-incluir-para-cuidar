@@ -60,6 +60,7 @@
   margin-top: 0.938rem;
   font: 400 0.975rem/1.6 "Roboto", sans-serif;
   letter-spacing: 0.6px;
+  color: var(--darkSlateGray);
 }
 
 .listCharacteristics .description {

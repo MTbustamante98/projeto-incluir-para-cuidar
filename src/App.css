@@ -63,6 +63,33 @@ button:focus {
   }
 }
 
+.containerError {
+  margin: 1rem 0 0 1.5rem;
+  position: relative;
+}
+
+.containerError h1 {
+  font: bold 3rem "Roboto", Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.containerError h1::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 1.6rem;
+  left: -0.313rem;
+  border-radius: 0.313rem;
+  background: var(--palegreen);
+  z-index: -1;
+}
+
+.containerError p {
+  font: normal 1rem "Roboto", Arial, sans-serif;
+}
+
 @media (max-width: 80rem) {
   body {
     background-size: contain;

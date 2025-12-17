@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import "./App.css";
 import { UserStorage } from "./UserContext";
 import MenuContext from "./UserMenuContext";
+import NotFound from "./NotFound";
 
 const Home = lazy(() => import("./Componentes/Home"));
 const Header = lazy(() => import("./Componentes/Header"));
@@ -35,6 +36,7 @@ function App() {
                   <Route path="/rotina-abdome" element={<RotinaAbdome />} />
                   <Route path="/rotina-torax" element={<RotinaTorax />} />
                   <Route path="/sugestoes" element={<Sugestoes />} />
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </MenuContext>
             </Suspense>

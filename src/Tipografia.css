@@ -25,12 +25,3 @@
   font: 500 1.2rem "Roboto", Arial, sans-serif;
 }
 
-@media (max-width: 1024px) {
-  .font-p-modal-xl {
-    font-size: 2rem;
-  }
-
-  .titulo-header-typewriter {
-    font-size: 3rem;
-  }
-}

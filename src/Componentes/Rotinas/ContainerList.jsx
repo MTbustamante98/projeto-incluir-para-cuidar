@@ -1,4 +1,3 @@
-import React from "react";
 import styleBoxRoutine from "./RoutineBox.module.css";
 import useMedia from "../../Hooks/useMedia";
 
@@ -14,7 +13,7 @@ const ContainerList = ({ currentList }) => {
       }
     >
       <h2 className={styleBoxRoutine.characteristics}>
-        Características do posicionamento
+        Características do posicionamento:
       </h2>
       <ul
         key={currentList.id}

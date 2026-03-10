@@ -12,7 +12,9 @@ const Sugestoes = () => {
     textarea: "",
   });
 
-  emailjs.init("S7MmKe84IxrIf2XJK");
+  React.useEffect(() => {
+    emailjs.init("S7MmKe84IxrIf2XJK");
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();

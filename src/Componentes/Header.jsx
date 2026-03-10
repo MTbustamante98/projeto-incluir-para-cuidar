@@ -18,7 +18,9 @@ const Header = () => {
       className={
         pathname === "/sugestoes"
           ? `${styles.headerSugestoes || ""}`
-          : `${styles.header} ${anime}`
+          : pathname === "/"
+            ? `${styles.headerHome} ${anime}`
+            : `${styles.header} ${anime}`
       }
     >
       <Link to="/" aria-label="Incluir para cuidar - Home">

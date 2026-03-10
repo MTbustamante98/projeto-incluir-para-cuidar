@@ -1,33 +1,48 @@
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 150px 1fr;
   align-items: center;
-  gap: 1.875rem;
+  z-index: 999;
+  position: relative;
+}
+
+.headerHome {
+  width: 90px;
+  height: 90px;
+  z-index: 999;
 }
 
 .title {
+  font:
+    500 4rem "Special Elite",
+    cursive;
+  color: var(--darkSlateGray);
   margin-top: 1.5rem;
+  justify-self: start;
   position: relative;
+  max-width: max-content;
 }
 
 .title::before {
   content: "";
-  width: 25%;
-  height: 6%;
+  width: 100%;
+  height: 3px;
   background: var(--lightgreen);
   position: absolute;
-  right: 4.75rem;
-  bottom: 0.313rem;
+  left: 0;
+  bottom: 0.625rem;
   border-radius: 0.25rem;
   opacity: 0.5;
 }
 
 .title::after {
   content: "";
+  position: absolute;
   height: 60px;
   width: 60px;
   display: inline-block;
   margin-left: 0.938rem;
-  background: url("../assets/ico-play-60px.png") no-repeat;
+  background: url("../assets/ico-play.png") no-repeat;
 }
 
 .header a {
@@ -53,20 +68,21 @@
   bottom: 1.75rem;
 }
 
-@media (max-width: 64rem) {
+@media (min-width: 75rem) {
   .header {
-    gap: 0;
+    gap: 1.875rem;
   }
+}
 
-  .header .logo {
+@media (max-width: 74.938rem) {
+  .header .logo,
+  .headerSugestoes .logo {
     width: 75%;
     height: auto;
   }
+}
 
-  .headerSugestoes .logo {
-    width: 75%;
-  }
-
+@media (max-width: 64rem) {
   .title {
     margin-top: 2rem;
   }
@@ -75,15 +91,32 @@
     font-size: 3rem;
     margin-top: 2.25rem;
   }
+}
 
-  .title::before {
-    right: 0.313rem;
+/* 425px até 768px */
+@media screen and (min-width: 26.563rem) and (max-width: 48rem) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
+  .header {
+    grid-template-columns: 100px 1fr !important;
+    align-items: start;
+    padding: 0 0.625rem 0 0.625rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    justify-self: end;
   }
 
   .title::after {
-    position: absolute;
-    top: -1rem;
-    margin-left: 0;
-    background: url("../assets/ico-play.png") no-repeat;
+    background: none;
+  }
+
+  .title::before {
+    top: 1.5rem;
   }
 }

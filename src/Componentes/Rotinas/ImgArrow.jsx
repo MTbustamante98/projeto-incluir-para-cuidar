@@ -5,7 +5,6 @@ import { UserMenuContext } from "../../CreateMenuContext";
 
 const ImgArrow = ({ alt, className, onClick, ref }) => {
   const { activeMenu } = React.useContext(UserMenuContext);
-
   return (
     <>
       {activeMenu ? (

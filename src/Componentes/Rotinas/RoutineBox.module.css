@@ -1,196 +1,218 @@
-.parentContainer {
-  position: relative;
-}
-
-.containerImgRoutine {
-  position: absolute;
-  top: 3rem;
-  left: 42rem;
-}
-
-.containerImgRoutine img {
-  width: 95% !important;
-  height: 550px;
-}
-
-.informativeParagraph {
-  position: absolute;
-  right: 4.75rem;
-  top: -5.5rem;
-}
-
-.numberingRoutines {
-  position: absolute;
-  right: 29rem;
-  margin-top: -3rem;
-  z-index: -1;
-}
-
-.numberingRoutines img {
-  width: 130px;
-  height: 130px;
-}
-
-.positionPuppet {
-  position: absolute;
-  top: 34rem;
-  left: 12rem;
-}
-
-.containerProperties {
-  position: relative;
-  left: 11.75rem;
-}
-
-.containerPropertiesMobile {
-  position: relative;
-}
-
-.characteristics {
-  font: 700 1.25rem "Special Elite", sans-serif;
-  letter-spacing: 0.8px;
-}
-
-.listCharacteristics {
-  margin-top: 0.938rem;
-  max-width: 55ch;
-}
-
-.listCharacteristics li {
-  margin-top: 0.938rem;
-  font: 400 0.975rem/1.6 "Roboto", sans-serif;
-  letter-spacing: 0.6px;
-  color: var(--darkSlateGray);
-}
-
-.listCharacteristics .description {
-  font: 700 1.1rem "Roboto", sans-serif;
-}
-
-.imgMenuMob {
-  position: absolute;
-  left: 290px;
-  top: -3px;
-  cursor: pointer;
-}
-
-@media (max-width: 90rem) {
-  .containerImgRoutine {
-    top: 0.625rem;
-    left: 30rem;
-  }
-
-  .containerImgRoutine img {
-    height: 400px;
-  }
-
-  .videoRoutine {
-    width: 25%;
-    height: 75%;
-    top: 3.438rem;
-  }
-
-  .positionPuppet {
-    top: 20rem;
-    left: 11rem;
-  }
-
-  .informativeParagraph {
-    top: -8rem;
-    right: 3.75rem;
-  }
-
-  .numberingRoutines {
-    right: 21.25rem;
-    margin-top: -7.75rem;
-  }
-
-  .characteristics {
-    font-size: 0.875rem;
-  }
-
-  .listCharacteristics .description {
-    font-size: 0.975rem;
-  }
-
-  .listCharacteristics li {
-    font-size: 0.875rem;
-  }
-}
-
-@media (max-width: 80rem) {
-  .containerImgRoutine {
-    top: 1.875rem;
-    left: 23rem;
-  }
-
-  .containerImgRoutine img {
-    width: 80% !important;
-    height: 550px;
-  }
-
-  .videoRoutine {
-    width: 27% !important;
-    height: 600px !important;
-    top: 7rem !important;
-  }
-
-  .positionPuppet {
-    top: 32rem;
-    left: 10rem;
-  }
-
-  .informativeParagraph {
-    top: -4rem;
-    right: 2rem;
-  }
-
-  .numberingRoutines {
-    right: 21rem;
-    margin-top: -2rem;
-  }
-}
-
-@media (max-width: 64rem) {
-  .containerImgRoutine {
-    top: 6rem;
-    left: 0;
-  }
-
-  .containerImgRoutine img {
-    width: 60% !important;
-    height: 600px;
-  }
-
-  .videoRoutine {
-    width: 40% !important;
-    height: 65% !important;
-    right: 1.875rem !important;
-    top: 10rem !important;
+@media (min-width: 64.063rem) {
+  .parentContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
   }
 
   .containerProperties {
-    left: 0.625rem;
-    margin-top: 2rem;
+    position: absolute;
+    top: 130px;
+    left: 180px;
+  }
+
+  .titleCharacteristicsAndImgDrop {
+    display: flex;
+    gap: 0.313rem;
+  }
+
+  .containerImgRoutine {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+  }
+
+  .boxVideoParagraph {
+    grid-column: 3;
+    position: relative;
+    top: -50px;
+    justify-self: end;
   }
 
   .positionPuppet {
-    top: 47rem;
-    left: 19rem;
+    position: absolute;
+    bottom: 80px;
+    left: 160px;
   }
 
-  .informativeParagraph {
-    top: 1.5rem;
-    right: 2rem;
+  .containerProperties h2 {
+    font:
+      600 1rem "Special Elite",
+      Arial,
+      sans-serif;
+  }
+
+  .listCharacteristics {
+    max-width: 45ch;
+  }
+
+  .listCharacteristics li {
+    margin-top: 0.938rem;
+    font:
+      400 0.875rem / 1.3 "Roboto",
+      sans-serif;
+    letter-spacing: 0.6px;
+    color: var(--darkSlateGray);
+  }
+
+  .listCharacteristics .description {
+    font:
+      700 1rem Roboto,
+      sans-serif;
   }
 
   .numberingRoutines {
-    right: 17.75rem;
-    margin-top: 2rem;
+    position: absolute;
+    right: 22rem;
+    margin-top: 7rem;
+    z-index: -1;
   }
 
   .numberingRoutines img {
-    width: 100px !important;
-    height: 100px !important;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 80rem) and (max-width: 90rem) {
+  .containerImgRoutine {
+    position: relative;
+    left: -100px;
+  }
+}
+
+/* de 1025px até 1279px */
+@media screen and (min-width: 64.063rem) and (max-width: 79.938rem) {
+  .parentContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .containerImgRoutine {
+    grid-column: 1;
+    position: relative;
+    left: 10px;
+  }
+
+  .positionPuppet {
+    left: 500px;
+  }
+}
+
+/* até 1199px */
+@media (max-width: 74.938rem) {
+  .containerProperties {
+    top: 110px;
+    left: 150px;
+  }
+
+  .boxVideoParagraph {
+    top: 0;
+  }
+}
+
+/* de 700px até 1024px*/
+@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
+  .positionPuppet {
+    position: absolute;
+    top: 350px;
+    right: 60px;
+    z-index: -1;
+  }
+
+  .containerProperties {
+    margin-top: 1rem;
+  }
+
+  .containerImgRoutine {
+    margin-top: 1.875rem;
+  }
+
+  .boxVideoParagraph {
+    margin-top: 5rem;
+  }
+}
+
+/* até 800px */
+@media (max-width: 53.125rem) {
+  .positionPuppet {
+    right: 40px;
+  }
+}
+
+/* 375px até 1024px */
+@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
+  .parentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  .containerImgRoutine {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    order: 1;
+  }
+
+  .containerImgRoutine img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .videoRoutine {
+    width: 80%;
+  }
+
+  .titleCharacteristicsAndImgDrop {
+    display: flex;
+    gap: 0.313rem;
+  }
+
+  .containerProperties h2 {
+    font: 600 1rem "Special Elite";
+  }
+
+  .titleAndImg {
+    display: flex;
+    gap: 0.313rem;
+    cursor: pointer;
+  }
+
+  .containerPropertiesMobile h2 {
+    font:
+      600 1.25rem "Roboto",
+      Arial,
+      sans-serif;
+    margin-bottom: 0.875rem;
+  }
+
+  .listCharacteristics li {
+    margin-bottom: 0.875rem;
+    font:
+      400 1rem "Roboto",
+      Arial,
+      sans-serif;
+    margin-bottom: 0.875rem;
+    letter-spacing: 1px;
+  }
+
+  .listCharacteristics span {
+    font-weight: 700;
+  }
+
+  .boxVideoParagraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.625rem;
+    order: 2;
   }
 }

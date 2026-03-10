@@ -8,7 +8,9 @@ const Footer = ({ next, prev }) => {
   const { pathname } = useLocation();
 
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={pathname === "/" ? `${styles.footerHome}` : `${styles.footer}`}
+    >
       {pathname !== "/" && (
         <Link to={prev} aria-label="Retornar para página anterior.">
           <img

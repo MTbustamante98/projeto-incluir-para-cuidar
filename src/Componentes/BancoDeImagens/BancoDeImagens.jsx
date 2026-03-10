@@ -26,18 +26,20 @@ const BancoDeImagens = () => {
 
   return (
     <>
-      <Head title="Banco de Imagens | Incluir para cuidar" />
-      <ContainerBorderLeft />
+      <section className={styles.containerMediaParagrAndMenu}>
+        <Head title="Banco de Imagens | Incluir para cuidar" />
+        <ContainerBorderLeft />
 
-      {activeVideo && (
-        <>
-          <p className={`${styles.informativeParagraph} font-instruction`}>
-            Selecione uma opção do menu para visualizar um vídeo tutorial
-            diferente.
-          </p>
-          <Video className={styles.videoBankPosition} source={currentVideo} />
-        </>
-      )}
+        {activeVideo && (
+          <div className={styles.boxMediaParagraph}>
+            <p className={`${styles.informativeParagraph} font-instruction`}>
+              Selecione uma opção do menu para visualizar um vídeo tutorial
+              diferente.
+            </p>
+            <Video className={styles.videoBankPosition} source={currentVideo} />
+          </div>
+        )}
+      </section>
       {activeModal && <Modal />}
     </>
   );

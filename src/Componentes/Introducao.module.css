@@ -1,25 +1,25 @@
 .initialContainerImg {
-  margin: -4rem 0 0 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (max-width: 90rem) {
+@media screen and (min-width: 48rem) and (max-width: 64rem) {
   .initialContainerImg {
-    margin: -6rem 0 0 1.25rem;
+    margin-top: -4rem;
   }
 }
 
-@media (max-width: 80rem) {
+@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
   .initialContainerImg {
-    margin: -1rem 0 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-@media (max-width: 64rem) {
-  .initialContainerImg img {
-    width: 600px !important;
-  }
-
+@media screen and (min-width: 23.438rem) and (max-width: 34.938rem) {
   .initialContainerImg {
-    margin: -5rem 0 0 5.75rem;
+    gap: 3rem;
   }
 }

@@ -1,31 +1,32 @@
 .footer {
-  height: 11%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../assets/barra-horizontal.png") center no-repeat;
+  background-size: cover;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  padding: 0 1rem 0 1rem;
+  height: 75px;
+}
+
+.footerHome {
+  display: grid;
+  align-items: center;
   background: url("../assets/barra-horizontal.png") center no-repeat;
   background-size: cover;
   width: 100%;
   position: fixed;
   bottom: 0;
-  z-index: 10;
+  z-index: 999;
+  padding: 0 1rem 0 1rem;
+  height: 75px;
 }
 
-.imgNext {
-  height: 65%;
-  width: 4%;
-  position: absolute;
-  right: 0.938rem;
-  top: 1.25rem;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.imgPrev {
-  height: 65%;
-  width: 4%;
-  position: absolute;
-  left: 0.938rem;
-  top: 1.25rem;
-  border-radius: 50%;
-  z-index: 1;
+.footerHome .imgNext {
+  justify-self: end;
 }
 
 .buttonSugestoes {
@@ -46,17 +47,13 @@
   box-shadow: 0 0 0 0;
 }
 
+.imgNext,
+.imgPrev {
+  height: 50px;
+  width: 50px;
+}
+
 @media (max-width: 90rem) {
-  .imgNext {
-    height: 65%;
-    top: 1rem;
-  }
-
-  .imgPrev {
-    height: 65%;
-    top: 1rem;
-  }
-
   .buttonSugestoes {
     padding: 0.5rem 2.5rem;
     top: 1rem;
@@ -64,40 +61,20 @@
 }
 
 @media (max-width: 80rem) {
-  .imgNext {
-    height: 55%;
-    top: 1.5rem;
-  }
-
-  .imgPrev {
-    height: 55%;
-    top: 1.5rem;
-  }
-
   .buttonSugestoes {
     top: 1.75rem;
   }
 }
 
 @media (max-width: 64rem) {
-  .footer {
-    height: 8%;
-  }
-
-  .imgNext {
-    height: 50%;
-    width: 5% !important;
-    top: 1rem;
-  }
-
-  .imgPrev {
-    height: 50%;
-    width: 5% !important;
-    top: 1rem;
-  }
-
   .buttonSugestoes {
     padding: 0.5rem 2.5rem;
     top: 1.25rem;
+  }
+
+  .imgNext,
+  .imgPrev {
+    height: 40px;
+    width: 40px;
   }
 }

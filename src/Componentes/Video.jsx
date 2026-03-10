@@ -19,7 +19,7 @@ const Video = ({ source, className, onEnded, ...props }) => {
           label="Português"
           default
         />
-        O teu navegador não suporta vídeo.
+        O seu navegador não suporta vídeo.
       </video>
     </div>
   );

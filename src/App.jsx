@@ -4,11 +4,11 @@ import "./App.css";
 import { UserStorage } from "./UserContext";
 import MenuContext from "./UserMenuContext";
 import NotFound from "./NotFound";
+import Home from "./Componentes/Home";
+import Header from "./Componentes/Header";
 
-const Home = lazy(() => import("./Componentes/Home"));
-const Header = lazy(() => import("./Componentes/Header"));
-const BancoDeImagens = lazy(() =>
-  import("./Componentes/BancoDeImagens/BancoDeImagens")
+const BancoDeImagens = lazy(
+  () => import("./Componentes/BancoDeImagens/BancoDeImagens"),
 );
 const RotinaMao = lazy(() => import("./Componentes/Rotinas/RotinaMao"));
 const RotinaCranio = lazy(() => import("./Componentes/Rotinas/RotinaCranio"));

@@ -1,18 +1,19 @@
-.containerMobileMenu {
-  width: 33%;
-  height: 60%;
+.containerDropMenu {
+  position: absolute;
+  width: 470px;
+  min-height: 100%;
+}
+
+.containerDropMenu {
   border-radius: 0.313rem;
   background: url("./assets/rad_background-removebg.png") center no-repeat;
   background-color: var(--white);
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-left-style: solid;
   border-left-width: 5px;
   border-left-color: var(--lightgreen);
   padding: 0.938rem;
-  margin-top: 0.313rem;
   animation: showUp 0.5s forwards;
-  z-index: 999;
 }
 
 @keyframes showUp {
@@ -26,10 +27,15 @@
   }
 }
 
-@media (max-width: 64rem) {
-  .containerMobileMenu {
-    width: 45%;
-    height: 60%;
-   
+@media screen and (min-width: 26.563rem) and (max-width: 64rem) {
+  .containerDropMenu {
+    left: -50px;
+  }
+}
+
+@media screen and (max-width: 26.5rem) {
+  .containerDropMenu {
+    left: -30px;
+    width: 400px;
   }
 }

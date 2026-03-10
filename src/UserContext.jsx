@@ -4,10 +4,12 @@ import { useLocation } from "react-router-dom";
 
 export const UserStorage = ({ children }) => {
   const [currentVideo, setCurrentVideo] = React.useState(
-    "/videos/apresentacao.mp4"
+    "/videos/apresentacao.mp4",
   );
   const [modifyTitle, setModifyTitle] = React.useState("Menu Inicial");
   const [activeModal, setOpenModal] = React.useState(false);
+  const [willActivatedBox, setWillActivedBox] = React.useState(true);
+  const boxRef = React.useRef(null);
   const { pathname } = useLocation();
 
   function changeVideo(path) {
@@ -32,6 +34,11 @@ export const UserStorage = ({ children }) => {
     setOpenModal(false);
   }, [pathname]);
 
+  React.useEffect(() => {
+    if (activeModal) setWillActivedBox(false);
+    else setWillActivedBox(true);
+  }, [willActivatedBox, activeModal]);
+
   return (
     <UserContext.Provider
       value={{
@@ -42,6 +49,9 @@ export const UserStorage = ({ children }) => {
         activeModal,
         openModal,
         closeModal,
+        willActivatedBox,
+        setWillActivedBox,
+        boxRef,
       }}
     >
       {children}

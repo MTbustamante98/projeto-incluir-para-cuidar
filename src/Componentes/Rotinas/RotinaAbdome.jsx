@@ -17,72 +17,82 @@ import useCalcSpacing from "../../Hooks/useCalcSpacing";
 
 const RotinaAbdome = () => {
   const { currentList, nextStep, index } = useRoutines(ROTINA_ABDOME);
-  const responsive = useMedia("(max-width: 90rem)");
+  const responsiveMenuDrop = useMedia("(max-width: 90rem)");
+  const responsiveImgPuppet = useMedia("(max-width: 43.688rem)");
+  const responsiveImgBaloon = useMedia("(max-width: 64rem)");
   const { activeMenu, toggleMenu, setActiveMenu } =
     React.useContext(UserMenuContext);
   const refMenu = React.useRef(null);
   const refArrow = React.useRef(null);
-
   useCallRef(refMenu, refArrow, setActiveMenu);
-  const calcSpacing = useCalcSpacing();
+  const spacing = useCalcSpacing();
 
   return (
-    <section className={styleBoxRoutine.parentContainer}>
-      <Head title="Rotina Abdome | Incluir para cuidar" />
-      <ContainerBorderLeft />
+    <>
+      <section className={styleBoxRoutine.parentContainer}>
+        <Head title="Rotina Mão | Incluir para cuidar" />
+        <ContainerBorderLeft />
+        {responsiveMenuDrop ? (
+          <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
+            <div className={styleBoxRoutine.titleCharacteristicsAndImgDrop}>
+              <h2 className={styleBoxRoutine.titleBoxCharacteristics}>
+                Características do posicionamento
+              </h2>
+              <ImgArrow
+                ref={refArrow}
+                className={styleBoxRoutine.imgMenuMob}
+                onClick={toggleMenu}
+              />
+            </div>
+            {activeMenu && (
+              <ResponsiveMenu ref={refMenu} currentList={currentList} />
+            )}
+          </div>
+        ) : (
+          <ContainerList className="responsive" currentList={currentList} />
+        )}
+        {currentList && (
+          <>
+            <RoutineImage
+              className={styleBoxRoutine.containerImgRoutine}
+              src={currentList.img}
+              alt="Figura que ilustra o tipo da rotina."
+            />
+            {!responsiveImgPuppet && (
+              <RoutineImage
+                className={styleBoxRoutine.positionPuppet}
+                src={currentList.boneco}
+                alt="Figura que ilustra a posição em que a pessoa deverá ficar."
+              />
+            )}
+          </>
+        )}
+        {ROTINA_ABDOME.slice(0, index + 1).map((item, i) => (
+          <div
+            key={item.id}
+            style={{ top: spacing(i) }}
+            className={styleBoxRoutine.numberingRoutines}
+          >
+            {!responsiveImgBaloon && <img src={item.balao} />}
+          </div>
+        ))}
+        {currentList && (
+          <div className={styleBoxRoutine.boxVideoParagraph}>
+            <p
+              className={`${styleBoxRoutine.informativeParagraph} font-instruction`}
+            >
+              Avance o vídeo para mudar o posicionamento.
+            </p>
+            <Video
+              className={styleBoxRoutine.videoRoutine}
+              source={currentList.video}
+              onEnded={nextStep}
+            />
+          </div>
+        )}
+      </section>
       <Footer next="/sugestoes" prev="/banco-de-imagens" />
-      {currentList && (
-        <>
-          <RoutineImage
-            className={styleBoxRoutine.containerImgRoutine}
-            src={currentList.img}
-            alt="Figura que ilustra o tipo da rotina."
-          />
-          <RoutineImage
-            className={styleBoxRoutine.positionPuppet}
-            src={currentList.boneco}
-            alt="Figura que ilustra a posição em que a pessoa deverá ficar."
-          />
-        </>
-      )}
-      {responsive ? (
-        <div className={`${styleBoxRoutine.containerProperties} animeUp`}>
-          <h2 className={styleBoxRoutine.characteristics}>
-            Características do posicionamento
-          </h2>
-          <ImgArrow
-            ref={refArrow}
-            alt="Seta indicando para baixo"
-            className={styleBoxRoutine.imgMenuMob}
-            onClick={toggleMenu}
-          />
-          {activeMenu && (
-            <ResponsiveMenu ref={refMenu} currentList={currentList} />
-          )}
-        </div>
-      ) : (
-        <ContainerList currentList={currentList} />
-      )}
-      <p className={`${styleBoxRoutine.informativeParagraph} font-instruction`}>
-        Avance o vídeo para mudar o posicionamento.
-      </p>
-      {ROTINA_ABDOME.slice(0, index + 1).map((item, i) => (
-        <div
-          key={i}
-          style={{ top: calcSpacing(i) }}
-          className={styleBoxRoutine.numberingRoutines}
-        >
-          <img src={item.balao} />
-        </div>
-      ))}
-      {currentList && (
-        <Video
-          className={styleBoxRoutine.videoRoutine}
-          source={currentList.video}
-          onEnded={nextStep}
-        />
-      )}
-    </section>
+    </>
   );
 };
 

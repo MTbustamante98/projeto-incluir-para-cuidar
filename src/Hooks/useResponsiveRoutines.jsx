@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import useMedia from "./useMedia";
 
@@ -10,7 +9,7 @@ const routines = [
 ];
 const useResponsiveRoutines = () => {
   const { pathname } = useLocation();
-  const responsiveTablet = useMedia("(max-width: 64rem)");
+  const responsiveTablet = useMedia("(max-width: 79.938rem)");
 
   const isRoutine = routines.some((route) => pathname.includes(route));
 

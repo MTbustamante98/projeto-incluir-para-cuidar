@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Modal.module.css";
 import ModalLink from "./ModalLink";
-import ImgCloseModal from "./ImgCloseModal";
+// import ImgCloseModal from "./ImgCloseModal";
 import { UserContext } from "../../CreateUserContext";
 import useClass from "../../Hooks/useClass";
+import ImgCloseModal from "./ImgCloseModal";
 
 const Modal = () => {
   const { closeModal, activeModal } = React.useContext(UserContext);
@@ -38,12 +39,14 @@ const Modal = () => {
       aria-labelledby="modal-title"
       ref={refModal}
     >
-      <ImgCloseModal />
-      <div className={styles.linkModalsContainer}>
-        <ModalLink to="/rotina-mao" label="Mão" />
-        <ModalLink to="/rotina-cranio" label="Crânio" />
-        <ModalLink to="/rotina-abdome" label="Abdome" />
-        <ModalLink to="/rotina-torax" label="Tórax" />
+      <div className={styles.wrapperContainer}>
+        <ImgCloseModal />
+        <div className={styles.linkModalsContainer}>
+          <ModalLink to="/rotina-mao" label="Mão" />
+          <ModalLink to="/rotina-cranio" label="Crânio" />
+          <ModalLink to="/rotina-abdome" label="Abdome" />
+          <ModalLink to="/rotina-torax" label="Tórax" />
+        </div>
       </div>
     </section>
   );

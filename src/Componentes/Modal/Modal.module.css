@@ -92,7 +92,11 @@
 
   .boxModal {
     width: 180px;
-    height: 180px;
+    height: 140px;
     font-size: 2rem;
+  }
+
+  .linkModalsContainer {
+    grid-template-columns: 1fr;
   }
 }

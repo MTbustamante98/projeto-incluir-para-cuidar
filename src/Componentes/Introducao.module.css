@@ -10,7 +10,7 @@
   }
 }
 
-@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
+@media (max-width: 64rem) {
   .initialContainerImg {
     display: flex;
     flex-direction: column;

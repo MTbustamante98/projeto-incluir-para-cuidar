@@ -60,7 +60,7 @@
 
   .listCharacteristics .description {
     font:
-      700 1rem Roboto,
+      700 1rem "Roboto",
       sans-serif;
   }
 
@@ -144,8 +144,8 @@
   }
 }
 
-/* 375px até 1024px */
-@media screen and (min-width: 23.438rem) and (max-width: 64rem) {
+/* 320px até 1024px */
+@media screen and (min-width: 20rem) and (max-width: 64rem) {
   .parentContainer {
     display: flex;
     flex-direction: column;
@@ -187,7 +187,7 @@
 
   .containerPropertiesMobile h2 {
     font:
-      600 1.25rem "Roboto",
+      600 1rem "Special Elite",
       Arial,
       sans-serif;
     margin-bottom: 0.875rem;
@@ -196,7 +196,7 @@
   .listCharacteristics li {
     margin-bottom: 0.875rem;
     font:
-      400 1rem "Roboto",
+      400 1rem/1.2 "Roboto",
       Arial,
       sans-serif;
     margin-bottom: 0.875rem;
@@ -214,5 +214,19 @@
     width: 100%;
     gap: 0.625rem;
     order: 2;
+  }
+}
+
+@media (max-width: 23.438rem) {
+  .containerProperties {
+    margin-top: 2rem;
+  }
+
+  .containerImgRoutine {
+    margin-top: 2rem;
+  }
+
+  .boxVideoParagraph {
+    margin-top: 8rem;
   }
 }

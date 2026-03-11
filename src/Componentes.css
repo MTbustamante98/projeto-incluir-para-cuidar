@@ -29,7 +29,8 @@
   }
 }
 
-@media screen and (min-width: 23.438rem) and (max-width: 31.25rem) {
+/* de 375px até 500px */
+@media screen and (min-width: 20rem) and (max-width: 31.25rem) {
   .container-media-video {
     width: 80%;
     height: 40vh;

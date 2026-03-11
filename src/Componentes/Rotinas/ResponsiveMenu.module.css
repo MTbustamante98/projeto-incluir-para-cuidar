@@ -2,6 +2,7 @@
   position: absolute;
   width: 470px;
   min-height: 100%;
+  
 }
 
 .containerDropMenu {
@@ -27,15 +28,24 @@
   }
 }
 
+/* de 425px até 1024px */
 @media screen and (min-width: 26.563rem) and (max-width: 64rem) {
   .containerDropMenu {
     left: -50px;
   }
 }
 
+/* até 424px */
 @media screen and (max-width: 26.5rem) {
   .containerDropMenu {
     left: -30px;
     width: 400px;
+  }
+}
+
+@media screen and (max-width: 23.125rem) {
+  .containerDropMenu {
+    left: 0;
+    width: 370px;
   }
 }

@@ -20,7 +20,6 @@
   margin-top: 1.5rem;
   justify-self: start;
   position: relative;
-  max-width: max-content;
 }
 
 .title::before {
@@ -86,7 +85,9 @@
   .header {
     grid-template-columns: 100px 1fr !important;
     align-items: start;
-    padding: 0 0.625rem 0 0.625rem;
+    margin: 0 auto;
+    width: calc(100% - 1.25rem);
+    padding: 0 0.625rem;
   }
 
   .title {
@@ -108,13 +109,6 @@
     margin-top: 2.25rem;
   }
 }
-
-/* 425px até 768px */
-/* @media screen and (min-width: 26.563rem) and (max-width: 48rem) {
-  .title {
-    font-size: 2rem;
-  }
-} */
 
 @media screen and (min-width: 20rem) and (max-width: 23.438rem) {
   .title {

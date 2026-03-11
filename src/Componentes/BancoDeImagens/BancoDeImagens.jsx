@@ -29,7 +29,6 @@ const BancoDeImagens = () => {
       <section className={styles.containerMediaParagrAndMenu}>
         <Head title="Banco de Imagens | Incluir para cuidar" />
         <ContainerBorderLeft />
-
         {activeVideo && (
           <div className={styles.boxMediaParagraph}>
             <p className={`${styles.informativeParagraph} font-instruction`}>

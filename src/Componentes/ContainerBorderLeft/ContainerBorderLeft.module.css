@@ -40,3 +40,9 @@
     width: 120px;
   }
 }
+
+@media (max-width: 425px) {
+  .containerBorderLeft {
+    display: none;
+  }
+}

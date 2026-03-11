@@ -12,9 +12,9 @@ const ContainerList = ({ currentList }) => {
           : `${styleBoxRoutine.containerProperties} animeUp`
       }
     >
-      <h2 className={styleBoxRoutine.characteristics}>
-        Características do posicionamento:
-      </h2>
+      {/* <h2 className={styleBoxRoutine.characteristics}>
+        Características do posicionamento
+      </h2> */}
       <ul
         key={currentList.id}
         className={`${styleBoxRoutine.listCharacteristics}`}

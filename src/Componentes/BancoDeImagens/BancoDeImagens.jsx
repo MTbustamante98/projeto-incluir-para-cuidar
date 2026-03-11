@@ -31,7 +31,7 @@ const BancoDeImagens = () => {
         <ContainerBorderLeft />
         {activeVideo && (
           <div className={styles.boxMediaParagraph}>
-            <p className={`${styles.informativeParagraph} font-instruction`}>
+            <p className={styles.informativeParagraph}>
               Selecione uma opção do menu para visualizar um vídeo tutorial
               diferente.
             </p>

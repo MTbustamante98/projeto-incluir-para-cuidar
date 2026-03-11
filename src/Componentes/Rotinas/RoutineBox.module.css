@@ -1,3 +1,13 @@
+.listCharacteristics:nth-child(1) li {
+  margin-top: 0.875rem;
+}
+
+@media (min-width: 1441px) {
+  .listCharacteristics {
+    max-width: 45ch;
+  }
+}
+
 @media (min-width: 64.063rem) {
   .parentContainer {
     display: grid;
@@ -32,6 +42,12 @@
     justify-self: end;
   }
 
+  .informativeParagraph {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0.625rem 3.75rem;
+  }
+
   .positionPuppet {
     position: absolute;
     bottom: 80px;
@@ -45,12 +61,8 @@
       sans-serif;
   }
 
-  .listCharacteristics {
-    max-width: 45ch;
-  }
-
   .listCharacteristics li {
-    margin-top: 0.938rem;
+    margin-bottom: 1rem;
     font:
       400 0.875rem / 1.3 "Roboto",
       sans-serif;
@@ -185,21 +197,20 @@
     cursor: pointer;
   }
 
-  .containerPropertiesMobile h2 {
+  /* .containerPropertiesMobile h2 {
     font:
-      600 1rem "Special Elite",
+      600 0.925rem "Special Elite",
       Arial,
       sans-serif;
     margin-bottom: 0.875rem;
-  }
+  } */
 
   .listCharacteristics li {
     margin-bottom: 0.875rem;
     font:
-      400 1rem/1.2 "Roboto",
+      400 0.875rem/1.2 "Roboto",
       Arial,
       sans-serif;
-    margin-bottom: 0.875rem;
     letter-spacing: 1px;
   }
 

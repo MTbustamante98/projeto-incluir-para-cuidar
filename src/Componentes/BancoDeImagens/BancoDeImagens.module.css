@@ -49,7 +49,10 @@
   }
 
   .informativeParagraph {
-    font-size: 0.625rem;
+    font:
+      700 0.575rem "Roboto",
+      Arial,
+      sans-serif;
   }
 }
 

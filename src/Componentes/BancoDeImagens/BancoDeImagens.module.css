@@ -31,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden !important;
   }
 
   .boxMediaParagraph {
@@ -51,7 +52,7 @@
 }
 
 @media (max-width: 20rem) {
-   .informativeParagraph {
+  .informativeParagraph {
     font-size: 0.525rem;
   }
 }

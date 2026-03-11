@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 48rem) and (max-width: 64rem) {
@@ -21,5 +22,11 @@
 @media screen and (min-width: 23.438rem) and (max-width: 34.938rem) {
   .initialContainerImg {
     gap: 3rem;
+  }
+}
+
+@media (max-width: 23.438rem) {
+  .initialContainerImg {
+    padding-bottom: 1.25rem;
   }
 }

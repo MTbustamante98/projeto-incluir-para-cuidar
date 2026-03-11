@@ -22,12 +22,7 @@ body {
   background: url("./assets/rad_background-removebg.png") center no-repeat;
   background-size: 75% 130%;
   min-height: 100vh;
-  overflow-x: hidden !important;
   overflow-y: auto;
-}
-
-main {
-  overflow-x: hidden !important;
 }
 
 ul,

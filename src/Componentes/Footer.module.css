@@ -32,8 +32,7 @@
 .buttonSugestoes {
   position: absolute;
   right: 1.75rem;
-  top: 1.25rem;
-  padding: 1.125rem 3rem;
+  padding: 0.725rem 3rem;
   background: var(--palegreen);
   border-radius: 0.625rem;
   border: none;
@@ -60,12 +59,6 @@
   }
 }
 
-@media (max-width: 80rem) {
-  .buttonSugestoes {
-    top: 1.75rem;
-  }
-}
-
 @media (max-width: 64rem) {
   .buttonSugestoes {
     padding: 0.5rem 2.5rem;
@@ -76,5 +69,11 @@
   .imgPrev {
     height: 40px;
     width: 40px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .buttonSugestoes {
+    padding: 0.313rem 1rem;
   }
 }

@@ -90,6 +90,11 @@
     padding: 0 0.625rem;
   }
 
+  .headerSugestoes .logo {
+    width: 60%;
+    height: auto;
+  }
+
   .title {
     font-size: 2rem;
     justify-self: end;
@@ -105,13 +110,13 @@
   }
 
   .titleSugestoes {
-    font-size: 3rem;
+    font-size: 1.75rem !important;
     margin-top: 2.25rem;
   }
 }
 
 @media screen and (min-width: 20rem) and (max-width: 23.438rem) {
   .title {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 }

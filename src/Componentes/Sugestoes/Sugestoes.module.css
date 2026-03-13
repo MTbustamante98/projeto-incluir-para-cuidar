@@ -1,166 +1,139 @@
 .containerSugestao {
   display: flex;
-  justify-self: center;
-  height: 100vh;
-  margin-top: 5rem;
+  flex-direction: column;
+  align-items: center;
 }
 
-.baloonImg {
-  width: 350px;
-  height: 350px;
-  position: fixed;
-  left: 20rem;
-  top: 8rem;
-}
-
-.form {
-  position: relative;
-  height: 40%;
-}
-
-.form .inputLabel {
-  position: absolute;
-  top: 5.5rem;
+.inputLabel {
+  margin-top: 3rem;
+  z-index: 1;
 }
 
 .inputLabel label {
-  font: 600 1.2rem "Roboto", Arial, sans-serif;
+  font:
+    600 1.2rem Roboto,
+    Arial,
+    sans-serif;
 }
 
 .inputLabel input {
   padding: 0.4rem 0.3rem;
-  margin-left: 0.3rem;
 }
 
-.form textarea {
-  position: absolute;
-  top: 10.938rem;
-  left: 0.5rem;
-  width: 97%;
-  height: 54%;
+.baloonImg {
+  width: 180px;
+  height: 180px;
+}
+
+.textAreaAndFrame {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  max-width: 420px;
+  margin-top: -75px;
+}
+
+.textAreaFrame {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  pointer-events: none;
+}
+
+.textAreaAndFrame textarea {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
   border: none;
   resize: none;
-  box-sizing: border-box;
-  padding: 0.625rem;
-  overflow: hidden;
-}
-
-.form textarea:focus {
   outline: none;
-  border: none;
+  height: 180px;
+  width: 100%;
+  padding: 1rem;
 }
 
-.form textarea::placeholder {
-  font: 500 3rem/1.3 "Special Elite", cursive;
+.textAreaAndFrame textarea::placeholder {
   text-align: center;
-  color: var(--black);
-  padding: 35px;
+  font:
+    500 2.2rem "Special Elite",
+    Arial,
+    sans-serif;
+  color: black;
+  padding-top: 1.125rem;
+  line-height: 1.3;
+  padding-top: 2rem;
 }
 
-.sobreposicao1 {
-  position: absolute;
-  background: var(--white);
-  width: 97%;
-  height: 5%;
-  top: 373px;
-  left: 8px;
-  z-index: -1;
+.paragraphDescription {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.313rem;
+  font:
+    500 0.925rem "Roboto",
+    Arial,
+    sans-serif;
+  text-align: center;
 }
 
-.sobreposicao2 {
-  position: absolute;
-  background: var(--white);
-  width: 97%;
-  height: 5%;
-  top: 10.188rem;
-  left: 0.5rem;
-  z-index: -1;
-}
-
-.textareaImg {
-  width: 550px;
-  height: 550px;
-}
-
-@media (max-width: 90rem) {
+/* a partir de 1200px */
+@media (min-width: 75rem) {
   .containerSugestao {
-    margin-top: -4rem;
+    margin-top: -180px !important;
   }
+}
 
+@media screen and (min-width: 64rem) {
   .baloonImg {
     width: 250px;
     height: 250px;
-    position: fixed;
-    left: 8rem;
-    top: 8rem;
-  }
-
-  .form textarea {
-    height: 77%;
-  }
-
-  .sobreposicao1 {
-    height: 7%;
-  }
-}
-
-@media (max-width: 80rem) {
-  .baloonImg {
-    width: 300px;
-    height: 300px;
-    position: fixed;
-    left: 3rem;
-    top: 8rem;
+    position: relative;
+    left: -350px;
+    top: 180px;
   }
 
   .containerSugestao {
-    margin-top: 2rem;
-  }
-
-  .form textarea {
-    height: 58%;
-  }
-
-  .sobreposicao1 {
-    height: 7%;
+    margin-top: -100px;
   }
 }
 
-@media (max-width: 64rem) {
-  .containerSugestao {
-    margin-top: 9rem;
-    margin-left: 7rem;
+/* até 460px */
+@media (max-width: 28.75rem) {
+  .textAreaAndFrame {
+    margin-top: -80px;
+  }
+
+  .textAreaAndFrame textarea::placeholder {
+    font-size: 1.8rem;
   }
 
   .baloonImg {
-    width: 140px;
+    align-self: center;
+  }
+}
+
+/* até 375px */
+@media (max-width: 23.438rem) {
+  .textAreaAndFrame textarea {
+    height: 150px;
+  }
+
+  .textAreaAndFrame textarea {
+    padding: 1.2rem;
+  }
+
+  .textAreaAndFrame textarea::placeholder {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 20rem) {
+  .textAreaAndFrame {
+    margin-top: -60px;
+  }
+
+  .textAreaAndFrame textarea {
     height: 140px;
-    top: 18rem;
-    left: 1rem;
-  }
-
-  .form textarea {
-    height: 35%;
-    top: 9.375rem;
-  }
-
-  .form textarea::placeholder {
-    font-size: 2.5rem;
-    padding: 1.875rem;
-  }
-
-  .sobreposicao1 {
-    height: 5%;
-    top: 8.25rem;
-  }
-
-  .sobreposicao2 {
-    height: 6%;
-    top: 18.25rem;
-  }
-
-  .textareaImg {
-    width: 450px;
-    height: 450px;
   }
 }

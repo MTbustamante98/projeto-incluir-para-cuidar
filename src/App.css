@@ -16,14 +16,18 @@
   padding: 0;
 }
 
-body, html {
+html {
+  overflow-x: hidden;
+}
+
+body {
   position: relative;
   z-index: 0;
   background: url("./assets/rad_background-removebg.png") center no-repeat;
   background-size: contain;
   min-height: 100vh;
   overflow-y: auto;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
 }
@@ -33,7 +37,8 @@ li {
   list-style: none;
 }
 
-img, video {
+img,
+video {
   display: block;
   height: auto;
   max-width: 100%;
@@ -107,7 +112,8 @@ button:focus {
 } */
 
 @media (max-width: 26.563rem) {
-  body[class^="route-rotina"] {
+  body[class^="route-rotina"],
+  body[class^="route-sugestoes"] {
     background-position: center !important;
   }
 }

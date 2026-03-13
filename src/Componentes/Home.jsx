@@ -34,7 +34,7 @@ const Home = () => {
             />
           </picture>
           <Video
-            source="/videos/video-apresentacao-inicial.mp4"
+            source="/videos/apresentacao.mp4"
             aria-label="Vídeo introdutório sobre o projeto Incluir para Cuidar"
           />
         </div>

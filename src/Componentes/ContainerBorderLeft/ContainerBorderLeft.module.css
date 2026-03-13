@@ -34,6 +34,12 @@
   padding-top: 13rem;
 }
 
+@media (max-width: 1536px) {
+  .containerBorderLeft {
+    padding-top: 10rem;
+  }
+}
+
 /* até 1199px */
 @media (max-width: 74.938rem) {
   .containerBorderLeft {

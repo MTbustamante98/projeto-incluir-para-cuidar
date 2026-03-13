@@ -14,8 +14,12 @@
     justify-self: end;
   }
 
-  .boxMediaParagraph p {
-    margin-bottom: 1rem;
+  .informativeParagraph {
+    margin-bottom: 0.625rem;
+    font:
+      700 0.725rem "Roboto",
+      Arial,
+      sans-serif;
   }
 }
 

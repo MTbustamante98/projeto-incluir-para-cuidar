@@ -9,7 +9,7 @@ const Titulo = ({ children }) => {
     <h1
       className={
         pathname === "/sugestoes"
-          ? `${styles.title} ${styles.titleSugestoes} titulo-header-typewriter`
+          ? `${styles.title} ${styles.titleSugestoes}`
           : `${styles.title}`
       }
     >

@@ -8,7 +8,7 @@ const useModifyVideoAndTitle = () => {
   const modifyVideoAndTitle = React.useCallback(
     (title) => {
       const actions = {
-        Apresentação: () => changeVideo("/videos/apresentacao.mp4"),
+        Apresentação: () => changeVideo("/videos/video-apresentacao-inicial.mp4"),
         Legenda: () => changeVideo("/videos/legenda.mp4"),
         Informação: () => changeVideo("/videos/info.mp4"),
         Rotinas: () => openModal(),

@@ -66,7 +66,7 @@
   outline: none !important;
 }
 
-@media (max-width: 90rem) {
+@media (max-width: 96rem) {
   .ButtonSlideContainer {
     width: 250px;
   }

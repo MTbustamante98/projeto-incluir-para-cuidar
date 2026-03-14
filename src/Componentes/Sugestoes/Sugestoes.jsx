@@ -42,7 +42,7 @@ const Sugestoes = () => {
 
   return (
     <>
-      <section>
+      <section className={styles.main}>
         <Head title="Sugestões | Incluir para cuidar" />
         <article className={styles.containerSugestao}>
           <img

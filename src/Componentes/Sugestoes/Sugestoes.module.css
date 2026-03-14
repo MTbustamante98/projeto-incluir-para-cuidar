@@ -17,7 +17,14 @@
 }
 
 .inputLabel input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
   padding: 0.4rem 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.inputLabel input:focus {
+  border: 1px solid var(--lightgreen);
 }
 
 .baloonImg {
@@ -100,8 +107,13 @@
 
 /* até 460px */
 @media (max-width: 28.75rem) {
+  .inputLabel {
+    padding: 0 0.625rem;
+  }
+
   .textAreaAndFrame {
     margin-top: -80px;
+    padding: 0 0.625rem;
   }
 
   .textAreaAndFrame textarea::placeholder {
@@ -116,7 +128,7 @@
 /* até 375px */
 @media (max-width: 23.438rem) {
   .textAreaAndFrame textarea {
-    height: 150px;
+    height: 140px;
   }
 
   .textAreaAndFrame textarea {
@@ -126,6 +138,10 @@
   .textAreaAndFrame textarea::placeholder {
     padding-top: 1.25rem;
   }
+
+  .paragraphDescription {
+    padding-bottom: 10rem;
+  }
 }
 
 @media (max-width: 20rem) {
@@ -134,6 +150,6 @@
   }
 
   .textAreaAndFrame textarea {
-    height: 140px;
+    height: 135px;
   }
 }

@@ -51,7 +51,7 @@
 .headerSugestoes {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.875rem 0 1.875rem;
+  padding: 0 1rem 0 1rem;
 }
 
 .titleSugestoes {
@@ -115,8 +115,8 @@
   }
 }
 
-@media screen and (min-width: 20rem) and (max-width: 23.438rem) {
+/* @media screen and (min-width: 20rem) and (max-width: 23.438rem) {
   .title {
     font-size: 1.25rem !important;
   }
-}
+} */

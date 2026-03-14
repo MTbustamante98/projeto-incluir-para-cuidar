@@ -81,7 +81,7 @@ const Sugestoes = () => {
             *Se você tem alguma ideia para melhorias, nos mande uma mensagem.
           </p>
           <p>
-            *Preencha seu nome e nos envie sua sugestão preenchendo a caixa de
+            *Preencha seu nome, e nos envie sua sugestão preenchendo a caixa de
             texto.
           </p>
         </div>

@@ -115,8 +115,8 @@
   }
 }
 
-/* @media screen and (min-width: 20rem) and (max-width: 23.438rem) {
+@media screen and (min-width: 20rem) and (max-width: 23.438rem) {
   .title {
     font-size: 1.25rem !important;
   }
-} */
+}

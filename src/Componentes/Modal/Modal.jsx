@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Modal.module.css";
 import ModalLink from "./ModalLink";
-// import ImgCloseModal from "./ImgCloseModal";
 import { UserContext } from "../../CreateUserContext";
 import useClass from "../../Hooks/useClass";
 import ImgCloseModal from "./ImgCloseModal";

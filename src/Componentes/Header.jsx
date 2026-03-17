@@ -8,20 +8,22 @@ import useClass from "../Hooks/useClass";
 import useModifyTitle from "../Hooks/useModifyTitle";
 
 const Header = () => {
+  const refHeader = React.useRef();
   const { pathname } = useLocation();
-  const { modifyTitle } = React.useContext(UserContext);
+  const { modifyTitle, activeModal } = React.useContext(UserContext);
   const anime = useClass();
   useModifyTitle();
-
+  
   return (
     <header
-      className={
-        pathname === "/sugestoes"
-          ? `${styles.headerSugestoes || ""}`
-          : pathname === "/"
-            ? `${styles.headerHome} ${anime}`
-            : `${styles.header} ${anime}`
-      }
+      ref={refHeader}
+      className={`${styles.header} ${
+        pathname === "/"
+          ? styles.headerHome
+          : pathname === "/sugestoes"
+            ? styles.headerSugestoes
+            : ""
+      } ${anime} ${activeModal ? styles.active : ""}`}
     >
       <Link to="/" aria-label="Incluir para cuidar - Home">
         <img className={styles.logo} src={Logo} alt="Logo da empresa." />

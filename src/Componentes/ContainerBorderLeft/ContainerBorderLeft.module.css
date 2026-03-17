@@ -27,12 +27,12 @@
   gap: 1.25rem;
 }
 
-:global(.route-rotina-mao) .containerBorderLeft,
+/* :global(.route-rotina-mao) .containerBorderLeft,
 :global(.route-rotina-cranio) .containerBorderLeft,
 :global(.route-rotina-abdome) .containerBorderLeft,
 :global(.route-rotina-torax) .containerBorderLeft {
   padding-top: 13rem;
-}
+} */
 
 @media (max-width: 1536px) {
   .containerBorderLeft {

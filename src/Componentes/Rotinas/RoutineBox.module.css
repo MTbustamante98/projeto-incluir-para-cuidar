@@ -19,6 +19,7 @@
     position: absolute;
     top: 130px;
     left: 180px;
+    z-index: 999;
   }
 
   .titleCharacteristicsAndImgDrop {
@@ -93,6 +94,9 @@
   .containerImgRoutine {
     position: relative;
     left: -100px;
+    top: -25px;
+    width: 400px;
+    height: 400px;
   }
 }
 

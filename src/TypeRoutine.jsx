@@ -155,8 +155,10 @@ export const ROTINA_TORAX = [
     balao: "./assets/img-numeracao-2.png",
     boneco: "./assets/boneco-perfil.png",
     tipo: "Posicionamento Tórax PE(Postero-Exposto ou Postero-Estático)",
-    posicao: "O paciente deverá ficar em pé.",
-    modo: "",
-    direcaoRX: "",
+    posicao:
+      "O paciente permanece em posição ortostática, com o tórax anterior encostado no receptor de imagem e os ombros projetados para frente.",
+    modo: "O paciente deverá ficar em pé.",
+    direcaoRX:
+      "O feixe de raios X é direcionado da região posterior para a anterior, atravessando o dorso e emergindo pela face anterior do tórax.",
   },
 ];

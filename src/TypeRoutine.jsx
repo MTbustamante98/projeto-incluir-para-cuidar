@@ -117,10 +117,12 @@ export const ROTINA_ABDOME = [
     video: "/videos/abdome-rub-dle.mp4",
     balao: "./assets/img-numeracao-3.png",
     boneco: "./assets/boneco-deitado.png",
-    tipo: "",
-    posicao: "",
-    modo: "",
-    direcaoRX: "",
+    tipo: "Posicionamento Abdomen AP",
+    posicao:
+      "O paciente é posicionado em decúbito dorsal(barriga para cima), com o corpo alinhado ao centro da mesa e do receptor de imagem.",
+    modo: "O paciente deverá ficar deitado.",
+    direcaoRX:
+      "O raio é direcionado de frente para o abdome, bem no centro da região. A imagem é feita com o paciente soltando o ar",
   },
   {
     img: "./assets/abdome-dle.png",

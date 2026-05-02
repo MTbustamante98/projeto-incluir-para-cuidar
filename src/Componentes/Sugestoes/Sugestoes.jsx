@@ -4,41 +4,12 @@ import Head from "../Helper/Head";
 import Footer from "../Footer";
 import ImgBaloon from "../../assets/balao-sugestao.png";
 import TextAreaImg from "../../assets/textarea-sugestao.png";
-import emailjs from "@emailjs/browser";
 import useAddClassName from "../../Hooks/useAddClassName";
+import useFormSugestoes from "../../Hooks/useFormSugestoes";
 
 const Sugestoes = () => {
   useAddClassName();
-  const [form, setForm] = React.useState({
-    nome: "",
-    textarea: "",
-  });
-
-  React.useEffect(() => {
-    emailjs.init("S7MmKe84IxrIf2XJK");
-  }, []);
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    if (!form.nome || !form.textarea) return false;
-
-    emailjs
-      .send("service_4s0cv2p", "template_7aen7un", {
-        name: form.nome,
-        message: form.textarea,
-      })
-      .then(() => {
-        alert("Sugestão enviada com sucesso!");
-        setForm({ nome: "", textarea: "" });
-      })
-      .catch((e) => alert("Erro, tente novamente!", e));
-  }
-
-  function handleChange({ target }) {
-    const { id, value } = target;
-    setForm({ ...form, [id]: value });
-  }
+  const { form, handleChange, handleSubmit, loading } = useFormSugestoes();
 
   return (
     <>
@@ -86,7 +57,7 @@ const Sugestoes = () => {
           </p>
         </div>
       </section>
-      <Footer prev="/banco-de-imagens" />
+      <Footer loading={loading} prev="/banco-de-imagens" />
     </>
   );
 };

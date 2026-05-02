@@ -1,10 +1,9 @@
-import React from "react";
 import styles from "./Footer.module.css";
 import ImgNext from "../assets/avancar-prox-pagina.png";
 import ImgPrev from "../assets/img-prev.png";
 import { Link, useLocation } from "react-router";
 
-const Footer = ({ next, prev }) => {
+const Footer = ({ next, prev, loading }) => {
   const { pathname } = useLocation();
 
   return (
@@ -21,13 +20,19 @@ const Footer = ({ next, prev }) => {
         </Link>
       )}
       {pathname === "/sugestoes" ? (
-        <button
-          className={`${styles.buttonSugestoes} font-btn-sugestao`}
-          type="submit"
-          form="sendEmail"
-        >
-          Enviar
-        </button>
+        loading ? (
+          <button disabled className={`${styles.buttonSugestoes} font-btn-sugestao`}>
+            Carregando...
+          </button>
+        ) : (
+          <button
+            className={`${styles.buttonSugestoes} font-btn-sugestao`}
+            type="submit"
+            form="sendEmail"
+          >
+            Enviar
+          </button>
+        )
       ) : (
         <Link to={next} aria-label="Avançar para a próxima página.">
           <img

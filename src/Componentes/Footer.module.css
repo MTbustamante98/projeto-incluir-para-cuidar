@@ -46,6 +46,10 @@
   box-shadow: 0 0 0 0;
 }
 
+.buttonSugestoes:disabled {
+  cursor: wait;
+}
+
 .imgNext,
 .imgPrev {
   height: 50px;

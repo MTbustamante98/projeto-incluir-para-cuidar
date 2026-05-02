@@ -90,6 +90,16 @@
   }
 }
 
+.mainArrows {
+  position: relative;
+  left: 600px;
+}
+
+.boxArrows {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (min-width: 80rem) and (max-width: 90rem) {
   .containerImgRoutine {
     position: relative;
